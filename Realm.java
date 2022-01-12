@@ -122,7 +122,7 @@ public class Realm {
                 200
 
         );
-        else if (random % 40 == 0) return new Skeleton(
+        else if (random % 30 == 0) return new Skeleton(
                 "Скелет",
                 25,
                 20,
