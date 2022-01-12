@@ -103,8 +103,8 @@ public class Realm {
     private static FantasyCharacter createMonster() {
         //Рандомайзер
         int random = (int) (Math.random() * 10);
-        //С вероятностью 50% создается или скелет, или гоблин
-        if (random % 50 == 0) return new Ogr(
+
+        if (random % 10 == 0) return new Ogr(
                 "Огр",
                 200,
                 45,
@@ -122,7 +122,7 @@ public class Realm {
                 200
 
         );
-        else if (random % 10 == 0) return new Skeleton(
+        else if (random % 40 == 0) return new Skeleton(
                 "Скелет",
                 25,
                 20,

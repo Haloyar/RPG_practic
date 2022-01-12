@@ -58,7 +58,9 @@ public class BattleScene {
             //Повышение уровня
             if (attacker.getXp() >= 1000) {
                 attacker.setHealthPoints(100);
+                attacker.setXp(0);
                 System.out.println("Уровень!");
+
                 try {
                     Realm.br.readLine();
                 } catch (IOException e) {
@@ -66,7 +68,7 @@ public class BattleScene {
                 }
             }
             //Окончание игры
-            if (attacker.getGold() == 1000) {
+            if (attacker.getGold() >= 1000) {
                 System.out.println("ПОБЕДА!!!");
                 fightCallback.fightLost();
             }
